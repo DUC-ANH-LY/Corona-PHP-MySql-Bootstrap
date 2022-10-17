@@ -510,7 +510,7 @@
       $comm  = $_POST['comm'];
       $s  = "";
  
-      foreach($symp as $chk1) $s .= $chk1;
+      foreach($symp as $chk1) $s .= $chk1.",";
       $sql = "INSERT INTO survey(username, email,mobile,symp,message) VALUES('$username','$email','$mobile','$s','$comm')";
       $res = mysqli_query($conn,$sql);
       if($res ){
